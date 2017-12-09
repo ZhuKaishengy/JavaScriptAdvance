@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>test回掉函数</title>
-</head>
 <body>
 <button id="btn">click</button>
-<script>
-    //dom事件回掉函数
+//dom事件回调函数
+<script type="text/javascript">
     document.getElementById('btn').onclick = function () {
-        alert(this.innerHTML);
+    alert(this.innerHTML);
     }
     //定时器回掉函数
     setTimeout(function () {
-        alert('haha');
+    alert('haha');
     },2000)
     /*1. 什么是回掉函数：
     （1）我们定义的
     （2）我们没有执行
     （3）最终执行了
-      2. 回掉函数分类
+    2. 回掉函数分类
     （1）dom事件回掉函数
     （2）定时器回掉函数
     （3）ajax回掉函数
@@ -28,3 +24,7 @@
 </script>
 </body>
 </html>
+<head>
+    <meta charset="UTF-8">
+    <title>test回掉函数</title>
+</head>

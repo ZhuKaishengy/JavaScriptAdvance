@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*1.在全局代码执行前，js引擎会创建一个栈来存储管理所有的执行上下文对象
+    * 2.在全局上下文（window）确定后，将其压入栈中
+    * 3.在函数执行上下文创建后，将其压入栈中
+    * 4.当函数执行完后将其推出栈中
+    * 5.当所有代码执行完后，栈中只剩下window
+    * 6.局部函数的上下文对象是函数执行前创建的
+    * 7.上下文对象的数目=函数的调用+1
+    * 8.只要是声明在调用之前就一定不会有错
+    * */
+        var a = function () {
+            console.log('a',this)//window
+            b()
+        }
+        var b = function () {
+            console.log('b',this)//window
+            c()
+        }
+        var c = function () {
+            console.log('c',this)//window
+        }
+        a()
+    </script>
+</body>
+</html>
