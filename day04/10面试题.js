@@ -26,7 +26,7 @@ function a() {
 }
 var a
 console.log(typeof a)//'function'
-//3.变量提升
+//3.b为全局表变量，加入window中，变量提升
 if(!(b in window)){
     var b = 1
 }

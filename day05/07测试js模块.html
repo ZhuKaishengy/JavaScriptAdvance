@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type='text/javascript' src='07自定义js模块2.js'></script>
+    <script type="text/javascript">
+         var add = myModule1.add()
+         var minus = myModule1.minus()
+        console.log(add,minus)
+        myModule1 = null
+    </script>
+</body>
+</html>

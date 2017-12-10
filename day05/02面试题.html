@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*1.执行fn2(fn1)时，上下文执行对象栈中:window（a =10），fn2（a =20）
+        *   但是由于变量的作用范围，fn1执行时，并不能读取fn2中的变量（代码编写时已经确定），因此，只能取全局变量中的a*/
+        var a = 10
+        function fn1() {
+            console.log(a)//10
+        }
+        function fn2(fn) {
+            var a  = 20
+            fn()
+        }
+        fn2(fn1)
+//        function fn3() {
+//            var a  = 20
+//            fn1()
+//        }
+//        fn3()
+//        2.
+        var fn = function () {
+            console.log(fn)//function
+        }
+        fn()
+        var obj = {
+            fun:function () {
+//                console.log(fun)//报错
+                console.log(this.fun)//可以
+            }
+        }
+        obj.fun()
+    </script>
+</body>
+</html>
