@@ -33,5 +33,5 @@ console.log(obj['content-type']);
 var paramName = 'me2';
 obj.paramName = 'haha';
 obj[paramName] = 'xixi';
-console.log(obj.paramName);
-console.log(obj.me2);
+console.log(obj.paramName);//haha
+console.log(obj.me2);//xixi

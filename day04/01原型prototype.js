@@ -4,7 +4,7 @@
 2. 原型对象中有一个属性constructor，他指向函数对象
 3. 给原型添加属性（方法），实例对象调用
 */
-console.log(Date.prototype,typeof Date.prototype)//Date {} 'object'
+console.log(Date.prototype,typeof Date.prototype)//Date {} ,'object'
 function Test1() {}
 Test1.prototype.method1 = function () {
     console.log('mothod1')

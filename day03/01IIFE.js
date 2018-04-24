@@ -20,16 +20,22 @@ var func2 = function () {
 //3.JavaScript模块的概念(重要)
 var module = (function () {
     var a = 1;
-    function add() {
-      return a++;
+    function add(num) {
+        return a+num;
+    };
+    function calcul() {
+        return a++;
     };
     return {
-        add:add
+        add:add,
+        calcul:calcul
     }
 
 })();
-var a = module.add();
-console.log(a);
+var a = module.add(3);
+console.log(a);//4
+a = module.calcul()
+console.log(a);//1
 //====================
 var b = {
     name:'zks',
@@ -37,4 +43,4 @@ var b = {
         return this.name;
     }
 };
-console.log(b.getName());
+console.log(b.getName());//zks

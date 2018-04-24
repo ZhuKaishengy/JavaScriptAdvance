@@ -31,3 +31,9 @@ console.log(Function.prototype === Function.__proto__)//true
 console.log(Object.prototype.__proto__)//null
 // 5.所有函数对象都有显式原型和隐式原型
 console.log(Fn.prototype.__proto__)
+
+console.log('=================')
+console.log(Object.prototype)
+console.log({} instanceof  Object)
+console.log(Object.prototype instanceof Object)
+

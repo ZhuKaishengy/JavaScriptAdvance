@@ -13,6 +13,7 @@ function Person1(name) {
     return '1';
 }
 
+console.log('name:',new Person1('zks').getName());
 // console.log(Person1('zks'));//window对象 1
 // console.log(new Person1('zks'));//Person1 {}    Person1 { name: 'zks' }
 //============================================================================
@@ -33,7 +34,7 @@ function Person(name) {
 var p = new Person('zks')//this:Person {}
 p.getName();//this:p
 var obj = {};
-p.setName.apply(obj,'sjx');//this:obj
+p.setName.call(obj,'sjx');//this:obj
 
 //总结：
 // 任何函数本质上都是通过对象来调用的

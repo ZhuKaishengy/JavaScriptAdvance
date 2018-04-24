@@ -1,4 +1,4 @@
-// 方式二：匿名函数子调用，推荐使用这种
+// 方式二：匿名函数自调用，推荐使用这种
 ;(function (window) {
     var a = 1
     function add() {

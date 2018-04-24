@@ -12,23 +12,25 @@
     <script type="text/javascript">
         /*要求：三个button，点击每一个返回其下标，循环遍历+监听*/
        var btns = document.getElementsByTagName('button')
-//        for (var i = 0; i < btns.length; i++) {
-//            var btn = btns[i];
-//            btn.index = i + 1//将btn的下表保存在其对象上
-//            btn.onclick = function () {
-////                alert('第'+(i+1)+'个')//这种写法不可以，返回都是4，循环已经执行完了
-//                alert('第'+this.index+'个')
-//            }
-//        }
-//        ======使用闭包来实现循环遍历加监听=========
+
         for (var i = 0; i < btns.length; i++) {
-            (function (i) {
-                var btn = btns[i];
-                btn.onclick = function () {
-                    alert('第'+(i+1)+'个')
-                }
-            })(i)
+            var btn = btns[i];
+            btn.index = i + 1//将btn的下表保存在其对象上
+            btn.onclick = function () {
+//                alert('第'+(i+1)+'个')//这种写法不可以，返回都是4，循环已经执行完了
+                alert('第'+this.index+'个')
+            }
         }
+//        ======使用闭包来实现循环遍历加监听=========
+//        for (var i = 0; i < btns.length; i++) {
+//            (function (i) {
+//                alert(i)
+//                var btn = btns[i];
+//                btn.onclick = function () {
+//                    alert('第'+(i+1)+'个')
+//                }
+//            })(i)
+//        }
 
     </script>
 </body>

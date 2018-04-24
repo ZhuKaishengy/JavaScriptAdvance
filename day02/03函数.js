@@ -30,7 +30,8 @@ var obj1 = {
         return this.name;
     }
 }
-obj1.getName();
+console.log(obj1.getName());
+
 function Person(name,age) {
     this.name = name;
     this.age = age;
@@ -44,3 +45,8 @@ var obj2 = {}
 // obj2.test3();
 test3.call(obj2,28);
 console.log('callname---'+ obj2.name,obj2.age);
+
+function foo(num1, num2) {
+    return num1*num2
+}
+console.log(foo.call(new Object(), 2, 5));//10

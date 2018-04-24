@@ -30,7 +30,8 @@ function change(obj) {
     }
 }
 change(a);
-console.log(a.name,a.age);
+console.log(a.name,a.age);//zks 25
+console.log(obj.name,obj.age)//sjx 26
 // eg2:深入理解值传递，改变的是什么，是局部变量
 var b = 1;
 function add1(b) {
@@ -41,8 +42,9 @@ function add2(b) {
     return b;
 }
 add1(b);
-console.log(b);
-console.log(add2(b));
+console.log(b);//1
+console.log(add2(b));//2
+console.log(b);//1
 //总结：值传递，基本类型传数据；引用类型传地址值
 
 

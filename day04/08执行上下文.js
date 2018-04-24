@@ -32,3 +32,8 @@ function func(a1) {
 }
 // func(1,3)
 func.call(new Date(),1,3)
+
+function test(a,b) {
+    console.log(arguments)//{ '0': 1, '1': 2 }
+}
+test(1,2)
