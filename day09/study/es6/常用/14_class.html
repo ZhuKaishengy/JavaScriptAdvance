@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12_class</title>
+</head>
+<body>
+</body>
+<!--
+1. 通过class定义类/实现类的继承
+2. 在类中通过constructor定义构造方法
+3. 通过new来创建类的实例
+4. 通过extends来实现类的继承
+5. 通过super调用父类的构造方法
+6. 重写从父类中继承的一般方法
+-->
+<script type="text/javascript">
+
+  function Person1(name,age) {//ES5的构造函数
+      this.name = name
+      this.age = age
+      this.getName = () => console.log(this.name)
+
+  }
+
+  let p = new Person1('haha',23)
+  p.getName()
+
+  console.log('====================')
+
+  class Person{//ES6中的类
+      constructor(name,age){//构造器
+          this.name = name
+          this.age = age
+      }
+      getAll(){
+          console.log(`name:${this.name} --- age:${this.age}`)
+      }
+  }
+
+  class Student extends Person{
+      constructor(name,age,desc){
+          super(name, age);
+          this.desc = desc
+      }
+      getDesc(){
+          return this.desc
+      }
+      //方法的重写
+      getAll(){
+          console.log(`name:${this.name} --- age:${this.age} --- desc:${this.desc}`)
+      }
+  }
+
+  let person = new Person('zks',12)
+  person.getAll()
+  let stu = new Student('sjx',21,'haha')
+  console.log(stu.getDesc());
+  stu.getAll()
+</script>
+</html>

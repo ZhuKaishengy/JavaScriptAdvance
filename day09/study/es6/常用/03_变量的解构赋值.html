@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_变量的解构赋值</title>
+</head>
+<body>
+<!--
+1. 理解:
+  * 从对象或数组中提取数据, 并赋值给变量(多个)
+2. 对象的解构赋值，这个是比较常用的，后台传来一个对象有很多属性，只取其中的一部分
+  let {n, a} = {n:'tom', a:12}
+3. 数组的解构赋值
+  let [a,b] = [1, 'atguigu'];
+4. 用途
+  * 给多个形参赋值
+-->
+<script type="text/javascript">
+  
+  let obj = {
+      name:'zks',
+      age:12
+  }
+  
+  let {name,age} = obj//对象的解构赋值，需要属性名相同
+  console.log(name,age)
+
+  function foo(obj) {//传统的方式
+      console.log(obj.name,obj.age)
+  }
+  foo(obj)
+
+  function bar({name,age}) {//对象的解构赋值常见用法，{name,age}相当于一个对象
+      console.log(name,age)
+  }
+  bar(obj)
+  
+  let arr = [1,8,4,'sjx',true]
+  
+  let [a,b,c,d,e] = arr
+  console.log(a,b,c,d,e)//1 8 4 "sjx" true
+
+  let [,b1,c1,,e1] = arr//数组的解构赋值不需要使用占位符
+  console.log(b1,c1,e1)//8 4 true
+
+</script>
+</body>
+</html>
