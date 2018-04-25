@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_IIFE模式</title>
+</head>
+<body>
+<script type='text/javascript' src='module3.js'></script>
+<script type='text/javascript'>
+
+  window.module.foo()
+  window.module.bar()
+
+  console.log(window.msg);//挺好，不会污染全局变量
+</script>
+</body>
+</html>
