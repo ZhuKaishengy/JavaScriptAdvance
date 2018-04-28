@@ -1,0 +1,19 @@
+{
+  "name": "grunt_test",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "grunt": "^1.0.2",
+    "grunt-babel": "^7.0.0",
+    "grunt-babel-cli": "^1.0.1",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.1",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}

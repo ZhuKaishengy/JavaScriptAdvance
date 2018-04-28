@@ -175,3 +175,7 @@ test(1,2)
 **[day08 javaScript的模块化规范](./day08/README.md)**
 
 **[day09 ES567规范](./day08/README.md)**
+
+**[day11 angularJs](./day11_angularjs/笔记/1_angularjs入门.md)**
+
+**[day12 自动化项目构建工具](./day11_angularjs/笔记/1_angularjs入门.md)**
