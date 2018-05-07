@@ -18,5 +18,8 @@
   "homepage": "https://github.com/ZhuKaishengy/JavaScriptAdvance#readme",
   "devDependencies": {
     "jquery": "^3.3.1"
+  },
+  "dependencies": {
+    "react-router": "^3.2.1"
   }
 }

@@ -13,6 +13,12 @@
   * cd hello-react
   * npm start
 
+  * npm run build
+  * npm install -g serve
+  * serve -s build
+
+
+
 ## 组件化项目编码的基本流程
 * 编写静态组件
   * 拆分页面
